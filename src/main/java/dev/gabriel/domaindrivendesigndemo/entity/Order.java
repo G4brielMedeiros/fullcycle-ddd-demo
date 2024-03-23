@@ -23,7 +23,7 @@ public class Order {
     }
 
     private double total() {
-        return Arrays.stream(orderItems).mapToDouble(OrderItem::getPrice).sum();
+        return Arrays.stream(orderItems).mapToDouble(OrderItem::getOrderItemTotal).sum();
     }
 
     public void validate() {
@@ -35,6 +35,9 @@ public class Order {
         }
         if (orderItems == null || orderItems.length == 0) {
             throw new IllegalArgumentException("orderItems must not be empty");
+        }
+        if (Arrays.stream(this.orderItems).anyMatch(orderItem -> orderItem.getQuantity() <= 0)) {
+            throw new IllegalArgumentException("quantity must be greater than 0");
         }
     }
 }

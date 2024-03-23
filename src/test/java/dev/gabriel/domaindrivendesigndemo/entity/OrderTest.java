@@ -46,13 +46,28 @@ class OrderTest {
     @Test
     public void shouldCalculateTotal() {
         OrderItem[] orderItems = {
-                new OrderItem(UUID.randomUUID(), "item1", 10),
-                new OrderItem(UUID.randomUUID(), "item2", 15)
+                new OrderItem(UUID.randomUUID(), UUID.randomUUID(), "item1", 10, 2),
+                new OrderItem(UUID.randomUUID(), UUID.randomUUID(), "item2", 15, 2)
         };
 
         var order = new Order(UUID.randomUUID(), UUID.randomUUID(), orderItems);
 
-        assertEquals(25, order.getTotal());
+        assertEquals(50, order.getTotal());
 
+    }
+
+    @Test
+    public void shouldThrowError_whenQuantityIsLessThanOrEqualToZero() {
+        var ex = assertThrows(
+                IllegalArgumentException.class,
+                () -> {
+                    OrderItem[] items = {
+                            new OrderItem(UUID.randomUUID(), UUID.randomUUID(), "item1", 10, -2)
+                    };
+                    new Order(UUID.randomUUID(), UUID.randomUUID(), items);
+                }
+        );
+
+        assertEquals("quantity must be greater than 0", ex.getMessage());
     }
 }
