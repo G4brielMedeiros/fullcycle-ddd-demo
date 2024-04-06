@@ -1,17 +1,8 @@
-package dev.gabriel.domaindrivendesigndemo.entity;
-
-import lombok.Getter;
+package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
 import java.util.UUID;
 
-@Getter
-public class OrderItem {
-
-    private UUID id;
-    private UUID productId;
-    private String name;
-    private double price;
-    private int quantity;
+public record OrderItem(UUID id, UUID productId, String name, double price, int quantity) {
 
     public OrderItem(UUID id, UUID productId, String name, double price, int quantity) {
         this.id = id;
@@ -31,5 +22,4 @@ public class OrderItem {
     public double getOrderItemTotal() {
         return price * quantity;
     }
-
 }

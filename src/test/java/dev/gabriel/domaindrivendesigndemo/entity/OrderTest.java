@@ -1,5 +1,7 @@
 package dev.gabriel.domaindrivendesigndemo.entity;
 
+import dev.gabriel.domaindrivendesigndemo.domain.entity.Order;
+import dev.gabriel.domaindrivendesigndemo.domain.entity.OrderItem;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;

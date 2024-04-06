@@ -1,6 +1,7 @@
 package dev.gabriel.domaindrivendesigndemo.entity;
 
-import dev.gabriel.domaindrivendesigndemo.value.Address;
+import dev.gabriel.domaindrivendesigndemo.domain.entity.Customer;
+import dev.gabriel.domaindrivendesigndemo.domain.value.Address;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,6 @@ class CustomerTest {
 
     private Customer customer;
     private final Address address = new Address("st", 1, "1234-5", "Winter Springs");
-
 
     @BeforeEach
     public void setup() {
@@ -77,5 +77,17 @@ class CustomerTest {
     public void shouldThrowError_whenActivatingWithoutAddress() {
         var ex = assertThrows(IllegalArgumentException.class, () -> customer.activate());
         assertEquals("address is mandatory to activate a customer", ex.getMessage());
+    }
+
+    @Test
+    void shouldAddRewardPoints() {
+        var customer = new Customer(UUID.randomUUID(), "name");
+        assertEquals(0, customer.getRewardPoints());
+
+        customer.addRewardPoints(10);
+        assertEquals(10, customer.getRewardPoints());
+
+        customer.addRewardPoints(10);
+        assertEquals(20, customer.getRewardPoints());
     }
 }

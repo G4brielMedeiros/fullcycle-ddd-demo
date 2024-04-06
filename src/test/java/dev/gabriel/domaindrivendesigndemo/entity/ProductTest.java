@@ -1,5 +1,6 @@
 package dev.gabriel.domaindrivendesigndemo.entity;
 
+import dev.gabriel.domaindrivendesigndemo.domain.entity.Product;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;

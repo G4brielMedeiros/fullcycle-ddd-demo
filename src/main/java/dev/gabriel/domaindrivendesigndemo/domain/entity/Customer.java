@@ -1,6 +1,6 @@
-package dev.gabriel.domaindrivendesigndemo.entity;
+package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
-import dev.gabriel.domaindrivendesigndemo.value.Address;
+import dev.gabriel.domaindrivendesigndemo.domain.value.Address;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +8,7 @@ import java.util.UUID;
 
 public class Customer {
 
+    @Getter
     private final UUID id;
 
     @Getter
@@ -18,6 +19,9 @@ public class Customer {
 
     @Getter
     private boolean active;
+
+    @Getter
+    private int rewardPoints = 0;
 
     public Customer(UUID id, String name) {
         this.id = id;
@@ -41,6 +45,10 @@ public class Customer {
 
     public void deactivate() {
         this.active = false;
+    }
+
+    public void addRewardPoints(int points) {
+        this.rewardPoints += points;
     }
 
     public void validate() {

@@ -1,4 +1,4 @@
-package dev.gabriel.domaindrivendesigndemo.value;
+package dev.gabriel.domaindrivendesigndemo.domain.value;
 
 
 import lombok.AllArgsConstructor;

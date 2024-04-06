@@ -1,4 +1,4 @@
-package dev.gabriel.domaindrivendesigndemo.entity;
+package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
 import lombok.Getter;
 

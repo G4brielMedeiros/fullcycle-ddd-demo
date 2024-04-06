@@ -1,17 +1,16 @@
-package dev.gabriel.domaindrivendesigndemo.entity;
+package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
 import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.UUID;
 
+@Getter
 public class Order {
 
     private final UUID id;
     private final UUID customerId;
     private final OrderItem[] orderItems;
-
-    @Getter
     private final double total;
 
     public Order(UUID id, UUID customerId, OrderItem[] orderItems) {
@@ -36,7 +35,7 @@ public class Order {
         if (orderItems == null || orderItems.length == 0) {
             throw new IllegalArgumentException("orderItems must not be empty");
         }
-        if (Arrays.stream(this.orderItems).anyMatch(orderItem -> orderItem.getQuantity() <= 0)) {
+        if (Arrays.stream(this.orderItems).anyMatch(orderItem -> orderItem.quantity() <= 0)) {
             throw new IllegalArgumentException("quantity must be greater than 0");
         }
     }
