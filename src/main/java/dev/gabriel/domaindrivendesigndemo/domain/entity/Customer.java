@@ -1,26 +1,25 @@
 package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
 import dev.gabriel.domaindrivendesigndemo.domain.value.Address;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.UUID;
 
+@Getter
+@EqualsAndHashCode
 public class Customer {
 
-    @Getter
     private final UUID id;
 
-    @Getter
     private String name;
 
     @Setter
     private Address address;
 
-    @Getter
     private boolean active;
 
-    @Getter
     private int rewardPoints = 0;
 
     public Customer(UUID id, String name) {

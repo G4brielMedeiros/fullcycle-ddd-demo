@@ -1,11 +1,14 @@
 package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.util.Arrays;
 import java.util.UUID;
 
 @Getter
+@EqualsAndHashCode
 public class Order {
 
     private final UUID id;

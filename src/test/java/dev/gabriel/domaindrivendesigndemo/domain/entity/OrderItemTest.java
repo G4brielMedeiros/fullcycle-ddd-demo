@@ -1,4 +1,4 @@
-package dev.gabriel.domaindrivendesigndemo.entity;
+package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
 import dev.gabriel.domaindrivendesigndemo.domain.entity.OrderItem;
 import org.junit.jupiter.api.Test;

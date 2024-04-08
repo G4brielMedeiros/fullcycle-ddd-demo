@@ -1,18 +1,18 @@
 package dev.gabriel.domaindrivendesigndemo.domain.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.util.UUID;
 
+@Getter
+@EqualsAndHashCode
 public class Product {
-
 
     private final UUID id;
 
-    @Getter
     private String name;
 
-    @Getter
     private double price;
 
     public Product(UUID id, String name, double price) {

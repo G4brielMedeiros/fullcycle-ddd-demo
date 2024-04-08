@@ -1,4 +1,4 @@
-package dev.gabriel.domaindrivendesigndemo.service;
+package dev.gabriel.domaindrivendesigndemo.domain.service;
 
 import dev.gabriel.domaindrivendesigndemo.domain.entity.Product;
 import dev.gabriel.domaindrivendesigndemo.domain.service.ProductService;

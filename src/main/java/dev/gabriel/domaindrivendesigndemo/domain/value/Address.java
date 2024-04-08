@@ -1,15 +1,13 @@
 package dev.gabriel.domaindrivendesigndemo.domain.value;
 
-
-import lombok.AllArgsConstructor;
-
-@AllArgsConstructor
-public class Address {
-
-    private final String street;
-    private final int number;
-    private final String zip;
-    private final String city;
+public record Address(String street, int number, String zip, String city) {
+    public Address(String street, int number, String zip, String city) {
+        this.street = street;
+        this.number = number;
+        this.zip = zip;
+        this.city = city;
+        validate();
+    }
 
     public void validate() {
         if (this.street.isBlank()) {
