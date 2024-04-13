@@ -1,9 +1,9 @@
 package dev.gabriel.ddd.infrastructure.repository;
 
-import dev.gabriel.ddd.domain.entity.Customer;
-import dev.gabriel.ddd.domain.value.Address;
-import dev.gabriel.ddd.infrastructure.repository.customer.CustomerDAO;
-import dev.gabriel.ddd.infrastructure.repository.customer.CustomerRepositoryJPA;
+import dev.gabriel.ddd.domain.customer.entity.Customer;
+import dev.gabriel.ddd.domain.customer.value.Address;
+import dev.gabriel.ddd.infrastructure.customer.repository.jpa.CustomerDAO;
+import dev.gabriel.ddd.infrastructure.customer.repository.jpa.CustomerRepositoryJPA;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

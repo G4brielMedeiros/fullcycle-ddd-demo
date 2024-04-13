@@ -1,16 +1,16 @@
 package dev.gabriel.ddd.infrastructure.repository;
 
-import dev.gabriel.ddd.domain.entity.Customer;
-import dev.gabriel.ddd.domain.entity.Order;
-import dev.gabriel.ddd.domain.entity.OrderItem;
-import dev.gabriel.ddd.domain.entity.Product;
-import dev.gabriel.ddd.domain.value.Address;
-import dev.gabriel.ddd.infrastructure.repository.customer.CustomerDAO;
-import dev.gabriel.ddd.infrastructure.repository.customer.CustomerRepositoryJPA;
-import dev.gabriel.ddd.infrastructure.repository.order.OrderDAO;
-import dev.gabriel.ddd.infrastructure.repository.order.OrderRepositoryJPA;
-import dev.gabriel.ddd.infrastructure.repository.product.ProductDAO;
-import dev.gabriel.ddd.infrastructure.repository.product.ProductRepositoryJPA;
+import dev.gabriel.ddd.domain.customer.entity.Customer;
+import dev.gabriel.ddd.domain.checkout.entity.Order;
+import dev.gabriel.ddd.domain.checkout.entity.OrderItem;
+import dev.gabriel.ddd.domain.product.entity.Product;
+import dev.gabriel.ddd.domain.customer.value.Address;
+import dev.gabriel.ddd.infrastructure.customer.repository.jpa.CustomerDAO;
+import dev.gabriel.ddd.infrastructure.customer.repository.jpa.CustomerRepositoryJPA;
+import dev.gabriel.ddd.infrastructure.order.repository.jpa.OrderDAO;
+import dev.gabriel.ddd.infrastructure.order.repository.jpa.OrderRepositoryJPA;
+import dev.gabriel.ddd.infrastructure.product.repository.jpa.ProductDAO;
+import dev.gabriel.ddd.infrastructure.product.repository.jpa.ProductRepositoryJPA;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

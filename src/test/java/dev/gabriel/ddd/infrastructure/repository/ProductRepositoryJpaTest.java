@@ -1,8 +1,8 @@
 package dev.gabriel.ddd.infrastructure.repository;
 
-import dev.gabriel.ddd.domain.entity.Product;
-import dev.gabriel.ddd.infrastructure.repository.product.ProductDAO;
-import dev.gabriel.ddd.infrastructure.repository.product.ProductRepositoryJPA;
+import dev.gabriel.ddd.domain.product.entity.Product;
+import dev.gabriel.ddd.infrastructure.product.repository.jpa.ProductDAO;
+import dev.gabriel.ddd.infrastructure.product.repository.jpa.ProductRepositoryJPA;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
